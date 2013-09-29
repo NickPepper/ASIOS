@@ -53,6 +53,7 @@
 		1F1F81B517F83B070074A9B1 /* ASIOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ASIOSTests-Info.plist"; sourceTree = "<group>"; };
 		1F1F81B717F83B070074A9B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1F1F81B917F83B070074A9B1 /* ASIOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASIOSTests.m; sourceTree = "<group>"; };
+		1F1F81C317F83C100074A9B1 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +113,7 @@
 			children = (
 				1F1F81A217F83B060074A9B1 /* ASIOS.h */,
 				1F1F81A417F83B060074A9B1 /* ASIOS.m */,
+				1F1F81C317F83C100074A9B1 /* Constants.h */,
 				1F1F81A017F83B060074A9B1 /* Supporting Files */,
 			);
 			path = ASIOS;
