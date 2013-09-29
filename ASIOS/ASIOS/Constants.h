@@ -51,7 +51,6 @@
 
 // Shift applied to page numbers to generate tag
 #define PAGESHIFT 	6
-#define PAGEMASK  	0x3F // 6 bits
 
 
 const int SYNC_PAGE	= 0 << PAGESHIFT;

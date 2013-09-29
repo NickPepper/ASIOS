@@ -24,6 +24,9 @@
  */
 
 #import "ASIOSParser.h"
+#import "Constants.h"
+#import "Constants_Wbxml.h"
+
 
 static const BOOL LOG_VERBOSE 	= NO; // <<<<<<<<<<<<<<<<<<<<<<<<< ???
 
