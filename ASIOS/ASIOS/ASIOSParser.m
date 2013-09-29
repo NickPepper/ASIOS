@@ -25,6 +25,40 @@
 
 #import "ASIOSParser.h"
 
+static const BOOL LOG_VERBOSE 	= NO; // <<<<<<<<<<<<<<<<<<<<<<<<< ???
+
+// The following constants are Wbxml standard
+int const START_DOCUMENT 		= 0;
+int const DONE 					= 1;
+int const START 				= 2;
+//int const END					= 3; // ??????????????????????????????????????????
+int const TEXT					= 4;
+int const END_DOCUMENT 			= 3;
+static const int NOT_FETCHED 	= INT_MIN;
+static const int NOT_ENDED 		= INT_MIN;
+static const int EOF_BYTE 		= -1;
+
+
 @implementation ASIOSParser
+
++ (id)sharedInstance
+{
+    static dispatch_once_t pred = 0;
+    __strong static id _sharedObject = nil;
+    dispatch_once(&pred, ^{
+        _sharedObject = [[self alloc] init];
+    });
+    return _sharedObject;
+}
+
+
+- (id)init
+{
+    if(self = [super init])
+    {
+	    // TODO:
+    }
+    return self;
+}
 
 @end

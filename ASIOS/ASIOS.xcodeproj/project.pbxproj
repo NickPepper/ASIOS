@@ -19,6 +19,8 @@
 		1F1F81C617F879820074A9B1 /* ASIOSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F81C517F879820074A9B1 /* ASIOSParser.m */; };
 		1F1F81C717F879820074A9B1 /* ASIOSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F81C517F879820074A9B1 /* ASIOSParser.m */; };
 		1F1F81C917F87B080074A9B1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1F1F81C817F87B080074A9B1 /* LICENSE */; };
+		1F1F81CD17F89CE20074A9B1 /* Constants_Wbxml.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F81CC17F89CE20074A9B1 /* Constants_Wbxml.m */; };
+		1F1F81CE17F89CE20074A9B1 /* Constants_Wbxml.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F81CC17F89CE20074A9B1 /* Constants_Wbxml.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		1F1F81C417F879820074A9B1 /* ASIOSParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIOSParser.h; sourceTree = "<group>"; };
 		1F1F81C517F879820074A9B1 /* ASIOSParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIOSParser.m; sourceTree = "<group>"; };
 		1F1F81C817F87B080074A9B1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		1F1F81CB17F89CE20074A9B1 /* Constants_Wbxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants_Wbxml.h; sourceTree = "<group>"; };
+		1F1F81CC17F89CE20074A9B1 /* Constants_Wbxml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants_Wbxml.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 				1F1F81C417F879820074A9B1 /* ASIOSParser.h */,
 				1F1F81C517F879820074A9B1 /* ASIOSParser.m */,
 				1F1F81C317F83C100074A9B1 /* Constants.h */,
+				1F1F81CB17F89CE20074A9B1 /* Constants_Wbxml.h */,
+				1F1F81CC17F89CE20074A9B1 /* Constants_Wbxml.m */,
 				1F1F81A017F83B060074A9B1 /* Supporting Files */,
 			);
 			path = ASIOS;
@@ -237,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F1F81C617F879820074A9B1 /* ASIOSParser.m in Sources */,
+				1F1F81CD17F89CE20074A9B1 /* Constants_Wbxml.m in Sources */,
 				1F1F81A517F83B060074A9B1 /* ASIOS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F1F81C717F879820074A9B1 /* ASIOSParser.m in Sources */,
+				1F1F81CE17F89CE20074A9B1 /* Constants_Wbxml.m in Sources */,
 				1F1F81BA17F83B070074A9B1 /* ASIOSTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

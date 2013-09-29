@@ -21,30 +21,6 @@
 #ifndef ASIOS_Constants_h
 #define ASIOS_Constants_h
 
-#pragma mark WBXML constants (tokens)
-
-#define SWITCH_PAGE 0x00
-#define END         0x01
-#define ENTITY      0x02
-#define STR_I       0x03
-#define LITERAL     0x04
-#define EXT_I_0     0x40
-#define EXT_I_1     0x41
-#define EXT_I_2     0x42
-#define PI          0x43
-#define LITERAL_C   0x44
-#define EXT_T_0     0x80
-#define EXT_T_1     0x81
-#define EXT_T_2     0x82
-#define STR_T       0x83
-#define LITERAL_A   0x84
-#define EXT_0       0xC0
-#define EXT_1       0xC1
-#define EXT_2       0xC2
-#define OPAQUE      0xC3
-#define LITERAL_AC  0xC4
-//#define WITH_CONTENT  0x40 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< !!! ???
-
 #pragma mark EAS WBXML tags (tokens)
 
 // Wbxml page definitions for EAS
