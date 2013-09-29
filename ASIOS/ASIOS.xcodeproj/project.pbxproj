@@ -16,6 +16,9 @@
 		1F1F81B217F83B070074A9B1 /* libASIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1F819A17F83B060074A9B1 /* libASIOS.a */; };
 		1F1F81B817F83B070074A9B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F1F81B617F83B070074A9B1 /* InfoPlist.strings */; };
 		1F1F81BA17F83B070074A9B1 /* ASIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F81B917F83B070074A9B1 /* ASIOSTests.m */; };
+		1F1F81C617F879820074A9B1 /* ASIOSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F81C517F879820074A9B1 /* ASIOSParser.m */; };
+		1F1F81C717F879820074A9B1 /* ASIOSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F81C517F879820074A9B1 /* ASIOSParser.m */; };
+		1F1F81C917F87B080074A9B1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1F1F81C817F87B080074A9B1 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		1F1F81B717F83B070074A9B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1F1F81B917F83B070074A9B1 /* ASIOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASIOSTests.m; sourceTree = "<group>"; };
 		1F1F81C317F83C100074A9B1 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		1F1F81C417F879820074A9B1 /* ASIOSParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIOSParser.h; sourceTree = "<group>"; };
+		1F1F81C517F879820074A9B1 /* ASIOSParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIOSParser.m; sourceTree = "<group>"; };
+		1F1F81C817F87B080074A9B1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,8 @@
 			children = (
 				1F1F81A217F83B060074A9B1 /* ASIOS.h */,
 				1F1F81A417F83B060074A9B1 /* ASIOS.m */,
+				1F1F81C417F879820074A9B1 /* ASIOSParser.h */,
+				1F1F81C517F879820074A9B1 /* ASIOSParser.m */,
 				1F1F81C317F83C100074A9B1 /* Constants.h */,
 				1F1F81A017F83B060074A9B1 /* Supporting Files */,
 			);
@@ -122,6 +130,7 @@
 		1F1F81A017F83B060074A9B1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1F1F81C817F87B080074A9B1 /* LICENSE */,
 				1F1F81A117F83B060074A9B1 /* ASIOS-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -215,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F1F81C917F87B080074A9B1 /* LICENSE in Resources */,
 				1F1F81B817F83B070074A9B1 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F1F81C617F879820074A9B1 /* ASIOSParser.m in Sources */,
 				1F1F81A517F83B060074A9B1 /* ASIOS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F1F81C717F879820074A9B1 /* ASIOSParser.m in Sources */,
 				1F1F81BA17F83B070074A9B1 /* ASIOSTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

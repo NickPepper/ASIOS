@@ -1,5 +1,5 @@
 //
-//  ASIOS.m
+//  ASIOSParser.m
 //  ASIOS
 //
 //  Created by  Nick Pershin on 9/29/13.
@@ -18,8 +18,13 @@
 //	limitations under the License.
 //
 
-#import "ASIOS.h"
+/**
+ * Extremely fast and lightweight WBXML parser, 
+ * implementing only the subset of WBXML that EAS uses (as defined in the EAS specification)
+ */
 
-@implementation ASIOS
-// TODO: delete this file as unneeded?
+#import "ASIOSParser.h"
+
+@implementation ASIOSParser
+
 @end
