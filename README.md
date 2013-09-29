@@ -1,4 +1,4 @@
 ASIOS
 =====
 
-ActiveSync implementation for iOS
+Exchange ActiveSync implementation for iOS
