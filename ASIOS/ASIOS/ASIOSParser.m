@@ -24,8 +24,9 @@
  */
 
 #import "ASIOSParser.h"
-#import "Constants.h"
+//#import "Constants.h" // it is empty now, probably will be deleted
 #import "Constants_Wbxml.h"
+#import "Constants_Tags.h"
 
 
 static const BOOL LOG_VERBOSE 	= NO; // <<<<<<<<<<<<<<<<<<<<<<<<< ???

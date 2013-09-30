@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F1F819E17F83B060074A9B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1F819D17F83B060074A9B1 /* Foundation.framework */; };
+		1F1F819E17F83B060074A9B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1F819D17F83B060074A9B1 /* Foundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		1F1F81A317F83B060074A9B1 /* ASIOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F1F81A217F83B060074A9B1 /* ASIOS.h */; };
 		1F1F81A517F83B060074A9B1 /* ASIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F81A417F83B060074A9B1 /* ASIOS.m */; };
 		1F1F81AC17F83B070074A9B1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1F81AB17F83B070074A9B1 /* XCTest.framework */; };
@@ -21,6 +21,10 @@
 		1F1F81C917F87B080074A9B1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1F1F81C817F87B080074A9B1 /* LICENSE */; };
 		1F1F81CD17F89CE20074A9B1 /* Constants_Wbxml.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F81CC17F89CE20074A9B1 /* Constants_Wbxml.m */; };
 		1F1F81CE17F89CE20074A9B1 /* Constants_Wbxml.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F81CC17F89CE20074A9B1 /* Constants_Wbxml.m */; };
+		1F1F81D117F985560074A9B1 /* Constants_Tags.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F81D017F985560074A9B1 /* Constants_Tags.m */; };
+		1F1F81D217F985560074A9B1 /* Constants_Tags.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F81D017F985560074A9B1 /* Constants_Tags.m */; };
+		1F1F81D517F9B18F0074A9B1 /* ASIOSBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F81D417F9B18F0074A9B1 /* ASIOSBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1F1F81D617F9B18F0074A9B1 /* ASIOSBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F81D417F9B18F0074A9B1 /* ASIOSBase64.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,10 @@
 		1F1F81C817F87B080074A9B1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1F1F81CB17F89CE20074A9B1 /* Constants_Wbxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants_Wbxml.h; sourceTree = "<group>"; };
 		1F1F81CC17F89CE20074A9B1 /* Constants_Wbxml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants_Wbxml.m; sourceTree = "<group>"; };
+		1F1F81CF17F985560074A9B1 /* Constants_Tags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants_Tags.h; sourceTree = "<group>"; };
+		1F1F81D017F985560074A9B1 /* Constants_Tags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants_Tags.m; sourceTree = "<group>"; };
+		1F1F81D317F9B18F0074A9B1 /* ASIOSBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIOSBase64.h; sourceTree = "<group>"; };
+		1F1F81D417F9B18F0074A9B1 /* ASIOSBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIOSBase64.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +131,13 @@
 			children = (
 				1F1F81A217F83B060074A9B1 /* ASIOS.h */,
 				1F1F81A417F83B060074A9B1 /* ASIOS.m */,
+				1F1F81D317F9B18F0074A9B1 /* ASIOSBase64.h */,
+				1F1F81D417F9B18F0074A9B1 /* ASIOSBase64.m */,
 				1F1F81C417F879820074A9B1 /* ASIOSParser.h */,
 				1F1F81C517F879820074A9B1 /* ASIOSParser.m */,
 				1F1F81C317F83C100074A9B1 /* Constants.h */,
+				1F1F81CF17F985560074A9B1 /* Constants_Tags.h */,
+				1F1F81D017F985560074A9B1 /* Constants_Tags.m */,
 				1F1F81CB17F89CE20074A9B1 /* Constants_Wbxml.h */,
 				1F1F81CC17F89CE20074A9B1 /* Constants_Wbxml.m */,
 				1F1F81A017F83B060074A9B1 /* Supporting Files */,
@@ -244,6 +256,8 @@
 			files = (
 				1F1F81C617F879820074A9B1 /* ASIOSParser.m in Sources */,
 				1F1F81CD17F89CE20074A9B1 /* Constants_Wbxml.m in Sources */,
+				1F1F81D117F985560074A9B1 /* Constants_Tags.m in Sources */,
+				1F1F81D517F9B18F0074A9B1 /* ASIOSBase64.m in Sources */,
 				1F1F81A517F83B060074A9B1 /* ASIOS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +268,8 @@
 			files = (
 				1F1F81C717F879820074A9B1 /* ASIOSParser.m in Sources */,
 				1F1F81CE17F89CE20074A9B1 /* Constants_Wbxml.m in Sources */,
+				1F1F81D217F985560074A9B1 /* Constants_Tags.m in Sources */,
+				1F1F81D617F9B18F0074A9B1 /* ASIOSBase64.m in Sources */,
 				1F1F81BA17F83B070074A9B1 /* ASIOSTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

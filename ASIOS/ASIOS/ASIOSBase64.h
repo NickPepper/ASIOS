@@ -1,8 +1,8 @@
 //
-//  Constants.h
+//  ASIOSBase64.h
 //  ASIOS
 //
-//  Created by  Nick Pershin on 9/29/13.
+//  Created by  Nick Pershin on 9/30/13.
 //  Copyright (c) 2013  Nick Pershin. All rights reserved.
 //
 // 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,9 +18,15 @@
 //	limitations under the License.
 //
 
-#ifndef ASIOS_Constants_h
-#define ASIOS_Constants_h
+#import <Foundation/Foundation.h>
 
-// TODO:
+@interface ASIOSBase64 : NSObject
+{
+    
+}
 
-#endif
++ (NSString *)encodeBase64WithString:(NSString *)strData;
++ (NSString *)encodeBase64WithData:(NSData *)objData;
++ (NSData *)decodeBase64WithString:(NSString *)strBase64;
+
+@end
