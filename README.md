@@ -2,6 +2,7 @@ ASIOS
 =====
 
 Exchange ActiveSync implementation for iOS (Objective-C, C).
+iOS Deployment Target: iOS 7.0
 
 Status: in progress.
 
