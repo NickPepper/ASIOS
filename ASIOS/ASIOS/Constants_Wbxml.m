@@ -5,6 +5,9 @@
 //  Created by  Nick Pershin on 9/29/13.
 //  Copyright (c) 2013  Nick Pershin. All rights reserved.
 //
+//  Ported from The Android Open Source Project
+//  Copyright (c) 2002,2003, Stefan Haustein, Oberhausen, Rhld., Germany
+//
 // 	Licensed under the Apache License, Version 2.0 (the "License");
 // 	you may not use this file except in compliance with the License.
 // 	You may obtain a copy of the License at
