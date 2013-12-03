@@ -52,9 +52,40 @@ extern int const STATUS_TOO_MANY_DEVICES;
 
 @property (strong, nonatomic) NSArray *pages;
 
+// The following vars are available to all to avoid method calls that represent the state of
+// the parser at any given time
+@property (nonatomic) int endTag;
+@property (nonatomic) int startTag;
+
+// The type of the last token read
+@property (nonatomic) int type;
+
+// The current page
+@property (nonatomic) int page;
+
+// The current tag
+@property (nonatomic) int tag;
+
+// The name of the current tag
+@property (strong, nonatomic) NSString *name;
+
+// Whether the current tag is associated with content (a value)
+@property (nonatomic) BOOL noContent;
+
+// The value read, as a String.  Only one of text or num will be valid, depending on whether the
+// value was requested as a String or an int (to avoid wasted effort in parsing)
+@property (strong, nonatomic) NSString *text;
+
+// The value read, as an int
+@property (nonatomic) int  num;
+
+// The value read, as bytes
+@property (strong, nonatomic) NSMutableArray *bytes;//byte[]
+
+
 // Singleton
 + (id)sharedInstance;
 
 - (id)init;
-
+- (int)status;
 @end

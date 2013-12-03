@@ -75,7 +75,31 @@ int const STATUS_TOO_MANY_DEVICES                         = 177;
     // where tags start in a page
     int TAG_BASE;
     
-    NSArray *_captureArray;
+    NSMutableArray *_captureArray;
+    
+    // the input stream for this parser
+    NSInputStream *_in;
+    
+    // the current tag depth
+    int _depth;
+    
+    // the upcoming (saved) id from the stream
+    int _nextId;
+    
+    // the current tag table (i.e. the tag table for the current page)
+    NSMutableArray *_tagTable;
+    
+    // an array of tag tables, as defined in EasTags
+    NSMutableArray *_tagTables;
+    
+    // the stack of names of tags being processed; used when debug = true
+    NSArray *_nameArray;
+    
+    // the stack of tags being processed
+    NSArray *_startTagArray;
+    
+    // the status of the last stream parsed
+    @protected int status;
 }
 
 
@@ -98,6 +122,7 @@ int const STATUS_TOO_MANY_DEVICES                         = 177;
         _capture = NO;
         
         TAG_BASE = 5;
+        _nextId  = NOT_FETCHED;
 
         // This array of string arrays is used only for generating logging output
         self.pages = @[
@@ -127,8 +152,23 @@ int const STATUS_TOO_MANY_DEVICES                         = 177;
                        [NSArray arrayWithObjects:NOTES, nil],               // empty!
                        [NSArray arrayWithObjects:RIGHTS_MANAGEMENT, nil]
                        ];
+        
+        //_tagTables = new String[self.pages.count + 1][];
+        _tagTables = [[NSMutableArray alloc] init];
+        
+        _nameArray      = [[NSArray alloc] initWithObjects:nil count:32];//String[]
+        _startTagArray  = [[NSArray alloc] initWithObjects:nil count:32];//int[]
+        
+        self.endTag = NOT_ENDED;
+        status = STATUS_NOT_SET;
+
     }
     return self;
+}
+
+
+- (int)status {
+    return status;
 }
 
 @end
