@@ -69,7 +69,15 @@ int const STATUS_TOO_MANY_DEVICES                         = 177;
 {
     BOOL _logging;
     BOOL _capture;
+    
+    NSString *_logTag;
+    
+    // where tags start in a page
+    int TAG_BASE;
+    
+    NSArray *_captureArray;
 }
+
 
 + (id)sharedInstance
 {
@@ -88,6 +96,8 @@ int const STATUS_TOO_MANY_DEVICES                         = 177;
     {
 	    _logging = NO;
         _capture = NO;
+        
+        TAG_BASE = 5;
 
         // This array of string arrays is used only for generating logging output
         self.pages = @[
