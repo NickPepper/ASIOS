@@ -78,7 +78,9 @@ int const STATUS_TOO_MANY_DEVICES                         = 177;
     NSMutableArray *_captureArray;
     
     // the input stream for this parser
-    NSInputStream *_in;
+    NSInputStream *_iStream;
+    // the output stream for this parser
+    NSOutputStream *_oStream;
     
     // the current tag depth
     int _depth;
@@ -93,11 +95,11 @@ int const STATUS_TOO_MANY_DEVICES                         = 177;
     NSMutableArray *_tagTables;
     
     // the stack of names of tags being processed; used when debug = true
-    NSArray *_nameArray;
+    NSArray *_nameArray; //uint8_t _nameArray[32];
     
     // the stack of tags being processed
-    NSArray *_startTagArray;
-    
+    NSArray *_startTagArray; //uint8_t _startTagArray[32];
+
     // the status of the last stream parsed
     @protected int status;
 }
@@ -169,6 +171,125 @@ int const STATUS_TOO_MANY_DEVICES                         = 177;
 
 - (int)status {
     return status;
+}
+
+// must be overriden in children
+- (BOOL)parse {
+    return NO;
+}
+
+/**
+ * Set the debug state of the parser.  When debugging is on, every token is logged to the console.
+ *
+ * @param val the desired state for debug output
+ */
+- (void)setDebug:(BOOL)val {
+    _logging = val;
+}
+
+/**
+ * Set the tag used for logging.  When debugging is on, every token is logged to the console.
+ *
+ * @param val the logging tag
+ */
+- (void)setLoggingTag:(NSString *)val {
+    _logTag = val;
+}
+
+/**
+ * Turns on data capture; this is used to create test streams that represent "live" data and
+ * can be used against the various parsers.
+ */
+- (void)captureOn {
+    _capture = true;
+    _captureArray = [NSMutableArray new];// array of Integers
+}
+
+/**
+ * Turns off data capture; writes the captured data to a specified file.
+ */
+/*
+Cup * cup = [[Cup alloc] init];
+
+@try
+{
+    [cup fill];
+}
+@catch ( NSException * exc )
+{
+    NSLog ( @"Exception caught: %@", exc );
+}
+@catch ( id exc )
+{
+    NSLog ( @"Unknown exception caught" );
+}
+@finally
+{
+    [cup release];
+}
+ */
+
+/*
+- (void)setUpStreamForFile:(NSString *)path {
+    
+    NSLog(@"Creating and opening NSOutputStream...");
+ 
+    _iStream = [[NSInputStream alloc] initWithFileAtPath:path];
+    
+    [_iStream setDelegate:self];
+    
+    [_iStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    
+    [_iStream open];
+    
+}
+- (void)createOutputStream {
+    
+    NSLog(@"Creating and opening NSOutputStream...");
+    
+    // oStream is an instance variable
+    
+    oStream = [[NSOutputStream alloc] initToMemory];
+    
+    [oStream setDelegate:self];
+    
+    [oStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    
+    [oStream open];
+    
+}
+*/
+- (void)captureOff:(NSString *)path
+{
+    @try
+    {
+        NSLog(@"Creating and opening NSOutputStream...");
+        
+        _oStream = [[NSOutputStream alloc] initToFileAtPath:path append:YES];
+        [_oStream setDelegate:self];
+        [_oStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+        [_oStream open];
+        
+        //FileOutputStream out = new FileOutputStream(path);
+        //out.write(captureArray.toString().getBytes());
+        //out.close();
+        
+        [_oStream close];
+    }
+//    @catch (FileNotFoundException e)
+//    {
+//        // This is debug code; exceptions aren't interesting.
+//    }
+    @catch (NSException * exc)
+    {
+        // TODO: remove after debug; exceptions aren't interesting.
+        NSLog(@"(captureOff) :: Exception caught: %@", exc);
+    }
+    @catch (id exc)
+    {
+        // TODO: remove after debug; exceptions aren't interesting.
+        NSLog(@"(captureOff) :: Exception caught: %@", exc);
+    }
 }
 
 @end

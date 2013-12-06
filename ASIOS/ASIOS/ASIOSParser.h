@@ -28,7 +28,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ASIOSParser : NSObject
+@interface ASIOSParser : NSObject <NSStreamDelegate>
 
 extern int const START_DOCUMENT;
 extern int const DONE;
@@ -77,7 +77,7 @@ extern int const STATUS_TOO_MANY_DEVICES;
 @property (strong, nonatomic) NSString *text;
 
 // The value read, as an int
-@property (nonatomic) int  num;
+@property (nonatomic) int num;
 
 // The value read, as bytes
 @property (strong, nonatomic) NSMutableArray *bytes;//byte[]
@@ -88,4 +88,10 @@ extern int const STATUS_TOO_MANY_DEVICES;
 
 - (id)init;
 - (int)status;
+- (BOOL)parse;
+- (void)setDebug:(BOOL)val;
+- (void)setLoggingTag:(NSString *)val;
+- (void)captureOn;
+- (void)captureOff:(NSString *)path;
+
 @end
