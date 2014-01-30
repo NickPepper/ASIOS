@@ -25,6 +25,10 @@
 		1F1F81D217F985560074A9B1 /* Constants_Tags.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F81D017F985560074A9B1 /* Constants_Tags.m */; };
 		1F1F81D517F9B18F0074A9B1 /* ASIOSBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F81D417F9B18F0074A9B1 /* ASIOSBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1F1F81D617F9B18F0074A9B1 /* ASIOSBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1F81D417F9B18F0074A9B1 /* ASIOSBase64.m */; };
+		1F6D5D45189A725C00D37C3B /* ASIOSProvisionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6D5D44189A725C00D37C3B /* ASIOSProvisionParser.m */; };
+		1F6D5D46189A725C00D37C3B /* ASIOSProvisionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6D5D44189A725C00D37C3B /* ASIOSProvisionParser.m */; };
+		1F6D5D49189A7CD300D37C3B /* ASIOSGalParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6D5D48189A7CD300D37C3B /* ASIOSGalParser.m */; };
+		1F6D5D4A189A7CD300D37C3B /* ASIOSGalParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6D5D48189A7CD300D37C3B /* ASIOSGalParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,10 @@
 		1F1F81D017F985560074A9B1 /* Constants_Tags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants_Tags.m; sourceTree = "<group>"; };
 		1F1F81D317F9B18F0074A9B1 /* ASIOSBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIOSBase64.h; sourceTree = "<group>"; };
 		1F1F81D417F9B18F0074A9B1 /* ASIOSBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIOSBase64.m; sourceTree = "<group>"; };
+		1F6D5D43189A725C00D37C3B /* ASIOSProvisionParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIOSProvisionParser.h; sourceTree = "<group>"; };
+		1F6D5D44189A725C00D37C3B /* ASIOSProvisionParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIOSProvisionParser.m; sourceTree = "<group>"; };
+		1F6D5D47189A7CD300D37C3B /* ASIOSGalParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIOSGalParser.h; sourceTree = "<group>"; };
+		1F6D5D48189A7CD300D37C3B /* ASIOSGalParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIOSGalParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,10 @@
 				1F1F81D417F9B18F0074A9B1 /* ASIOSBase64.m */,
 				1F1F81C417F879820074A9B1 /* ASIOSParser.h */,
 				1F1F81C517F879820074A9B1 /* ASIOSParser.m */,
+				1F6D5D47189A7CD300D37C3B /* ASIOSGalParser.h */,
+				1F6D5D48189A7CD300D37C3B /* ASIOSGalParser.m */,
+				1F6D5D43189A725C00D37C3B /* ASIOSProvisionParser.h */,
+				1F6D5D44189A725C00D37C3B /* ASIOSProvisionParser.m */,
 				1F1F81C317F83C100074A9B1 /* Constants.h */,
 				1F1F81CF17F985560074A9B1 /* Constants_Tags.h */,
 				1F1F81D017F985560074A9B1 /* Constants_Tags.m */,
@@ -254,6 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F6D5D49189A7CD300D37C3B /* ASIOSGalParser.m in Sources */,
+				1F6D5D45189A725C00D37C3B /* ASIOSProvisionParser.m in Sources */,
 				1F1F81C617F879820074A9B1 /* ASIOSParser.m in Sources */,
 				1F1F81CD17F89CE20074A9B1 /* Constants_Wbxml.m in Sources */,
 				1F1F81D117F985560074A9B1 /* Constants_Tags.m in Sources */,
@@ -266,6 +280,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F6D5D4A189A7CD300D37C3B /* ASIOSGalParser.m in Sources */,
+				1F6D5D46189A725C00D37C3B /* ASIOSProvisionParser.m in Sources */,
 				1F1F81C717F879820074A9B1 /* ASIOSParser.m in Sources */,
 				1F1F81CE17F89CE20074A9B1 /* Constants_Wbxml.m in Sources */,
 				1F1F81D217F985560074A9B1 /* Constants_Tags.m in Sources */,
@@ -447,6 +463,7 @@
 				1F1F81BF17F83B070074A9B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F1F81C017F83B070074A9B1 /* Build configuration list for PBXNativeTarget "ASIOSTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +472,7 @@
 				1F1F81C217F83B070074A9B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

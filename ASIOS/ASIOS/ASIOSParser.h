@@ -93,5 +93,13 @@ extern int const STATUS_TOO_MANY_DEVICES;
 - (void)setLoggingTag:(NSString *)val;
 - (void)captureOn;
 - (void)captureOff:(NSString *)path;
+- (NSString *)getValue;
+- (int)getValueInt;
+- (int)nextTag:(int)endingTag;
+- (void)skipTag;
+- (int)nextToken;
+- (void)setInput:(NSInputStream *)in initialize:(BOOL)initialize;
+- (void)resetInput:(NSInputStream *)in;
+- (void)log:(NSString *)str;
 
 @end
