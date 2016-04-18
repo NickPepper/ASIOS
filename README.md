@@ -10,6 +10,12 @@ Status: in progress.
 Any help will be appreciated.
 
 
+Current State
+-------------
+
+Frozen...
+
+
 Development Plan
 ----------------
 
