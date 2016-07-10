@@ -8,17 +8,17 @@
 //  Ported from The Android Open Source Project
 //  Copyright (C) 2010 The Android Open Source Project.
 //
-// 	Licensed under the Apache License, Version 2.0 (the "License");
-// 	you may not use this file except in compliance with the License.
-// 	You may obtain a copy of the License at
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
 //
-//	http://www.apache.org/licenses/LICENSE-2.0
+//  http://www.apache.org/licenses/LICENSE-2.0
 //
-//	Unless required by applicable law or agreed to in writing, software
-//	distributed under the License is distributed on an "AS IS" BASIS,
-//	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-//	See the License for the specific language governing permissions and
-//	limitations under the License.
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
 //
 
 #import "ASIOSProvisionParser.h"
@@ -54,21 +54,22 @@
 }
 
 
-// TODO: а нужен ли нам в Об-С getter-setter?
+// TODO: do we really need the getter-setter in Objective-C?
 - (NSString *)getSecuritySyncKey {
     return _mSecuritySyncKey;
 }
 
 
-// TODO: а нужен ли нам в Об-С getter-setter?
+// TODO: do we really need the getter-setter in Objective-C?
 - (void)setSecuritySyncKey:(NSString * )securitySyncKey {
     _mSecuritySyncKey = securitySyncKey;
 }
 
-// TODO: а нужен ли нам в Об-С getter-setter?
+// TODO: do we really need the getter-setter in Objective-C?
 - (int)getPolicyStatus {
     return _policyStatus;
 }
+
 
 
 //private
@@ -84,26 +85,26 @@
                 policyType = [self getValue];
                 [self log:[NSString stringWithFormat:@"Policy type: %@", policyType]];
             }
-                break;
+            break;
                 
             case TAGS_PROVISION_POLICY_KEY:
             {
                 _mSecuritySyncKey = [self getValue];
             }
-                break;
+            break;
                 
             case TAGS_PROVISION_STATUS:
             {
                 _policyStatus = [self getValueInt];
                 [self log:[NSString stringWithFormat:@"Policy status: %d", _policyStatus]];
             }
-                break;
+            break;
                 
             default:
             {
                 [self skipTag];
             }
-                break;
+            break;
         }
     }
 }
@@ -142,24 +143,26 @@
                 [self log:[NSString stringWithFormat:@"Provision status: %d", self.status]];
                 res = (self.status == STATUS_OK);
             }
-                break;
+            break;
             
             case TAGS_PROVISION_POLICIES:
             {
                 [self parsePolicies];
             }
-                break;
+            break;
                 
             case TAGS_PROVISION_REMOTE_WIPE:
             {
                 // Indicate remote wipe command received
                 _mRemoteWipe = YES;
             }
-                break;
+            break;
                 
             default:
+            {
                 [self skipTag];
-                break;
+            }
+            break;
         }
     }
 

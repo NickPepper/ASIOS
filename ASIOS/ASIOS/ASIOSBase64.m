@@ -5,17 +5,17 @@
 //  Created by  Nick Pershin on 9/30/13.
 //  Copyright (c) 2013  Nick Pershin. All rights reserved.
 //
-// 	Licensed under the Apache License, Version 2.0 (the "License");
-// 	you may not use this file except in compliance with the License.
-// 	You may obtain a copy of the License at
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
 //
-//	http://www.apache.org/licenses/LICENSE-2.0
+//  http://www.apache.org/licenses/LICENSE-2.0
 //
-//	Unless required by applicable law or agreed to in writing, software
-//	distributed under the License is distributed on an "AS IS" BASIS,
-//	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-//	See the License for the specific language governing permissions and
-//	limitations under the License.
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
 //
 
 #import "ASIOSBase64.h"
@@ -159,22 +159,30 @@ static const short _base64DecodingTable[256] = {
         
         switch (i % 4) {
             case 0:
+            {
                 objResult[j] = intCurrent << 2;
-                break;
+            }
+            break;
                 
             case 1:
+            {
                 objResult[j++] |= intCurrent >> 4;
                 objResult[j] = (intCurrent & 0x0f) << 4;
-                break;
+            }
+            break;
                 
             case 2:
+            {
                 objResult[j++] |= intCurrent >> 2;
                 objResult[j] = (intCurrent & 0x03) << 6;
-                break;
+            }
+            break;
                 
             case 3:
+            {
                 objResult[j++] |= intCurrent;
-                break;
+            }
+            break;
         }
         i++;
     }
@@ -185,15 +193,21 @@ static const short _base64DecodingTable[256] = {
     {
         switch (i % 4) {
             case 1: // invalid state
+            {
                 free(objResult);
                 return nil;
+            }
                 
             case 2:
+            {
                 k++;
                 // flow through
+            }
                 
             case 3:
+            {
                 objResult[k] = 0;
+            }
         }
     }
     

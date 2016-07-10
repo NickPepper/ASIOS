@@ -8,17 +8,17 @@
 //  Ported from The Android Open Source Project
 //  Copyright (C) 2008-2009 Marc Blank
 //
-// 	Licensed under the Apache License, Version 2.0 (the "License");
-// 	you may not use this file except in compliance with the License.
-// 	You may obtain a copy of the License at
+//  Licensed under the Apache License, Version 2.0 (the "License");
+//  you may not use this file except in compliance with the License.
+//  You may obtain a copy of the License at
 //
-//	http://www.apache.org/licenses/LICENSE-2.0
+//  http://www.apache.org/licenses/LICENSE-2.0
 //
-//	Unless required by applicable law or agreed to in writing, software
-//	distributed under the License is distributed on an "AS IS" BASIS,
-//	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-//	See the License for the specific language governing permissions and
-//	limitations under the License.
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
 //
 
 
@@ -33,18 +33,18 @@
 #import "Constants_Tags.h"
 
 
-static const BOOL LOG_VERBOSE 	= NO;
+static const BOOL LOG_VERBOSE   = NO;
 
 // The following constants are Wbxml standard
-int const START_DOCUMENT 		= 0;
-int const DONE 					= 1;
-int const START 				= 2;
-int const END					= 3;
-int const TEXT					= 4;
-int const END_DOCUMENT 			= 3;
-static const int NOT_FETCHED 	= INT_MIN;
-static const int NOT_ENDED 		= INT_MIN;
-static const int EOF_BYTE 		= -1;
+int const START_DOCUMENT        = 0;
+int const DONE                  = 1;
+int const START                 = 2;
+int const END                   = 3;
+int const TEXT                  = 4;
+int const END_DOCUMENT          = 3;
+static const int NOT_FETCHED    = INT_MIN;
+static const int NOT_ENDED      = INT_MIN;
+static const int EOF_BYTE       = -1;
 
 
 // Status according to http://blogs.msdn.com/b/exchangedev/archive/2011/08/19/provisioning-policies-remote-wipe-and-abq-in-exchange-activesync.aspx
@@ -122,7 +122,7 @@ int const STATUS_TOO_MANY_DEVICES                         = 177;
 {
     if(self = [super init])
     {
-	    _logging = NO;
+        _logging = NO;
         _capture = NO;
         
         _TAG_BASE = 5;
@@ -158,13 +158,13 @@ int const STATUS_TOO_MANY_DEVICES                         = 177;
                        ];
         
         //_tagTables = new String[self.pages.count + 1][];
-        _tagTables = [[NSMutableArray alloc] init];
+        _tagTables      = [[NSMutableArray alloc] init];
         
         _nameArray      = [[NSMutableArray alloc] initWithObjects:nil count:32];//String[]
         _startTagArray  = [[NSMutableArray alloc] initWithObjects:nil count:32];//int[]
         
-        self.endTag = NOT_ENDED;
-        status = STATUS_NOT_SET;
+        self.endTag     = NOT_ENDED;
+        status          = STATUS_NOT_SET;
 
     }
     return self;
@@ -579,14 +579,14 @@ Cup * cup = [[Cup alloc] init];
             // End of document
             self.type = DONE;
         }
-            break;
+        break;
             
         case WBXML_END:
         {
             self.type = END;
             [self pop];
         }
-            break;
+        break;
             
         case WBXML_STR_I:
         {
@@ -602,7 +602,7 @@ Cup * cup = [[Cup alloc] init];
                 [self log:[NSString stringWithFormat:@"%@: %@", self.name, (asInt ? self.num : self.text)]];
             }
         }
-            break;
+        break;
             
         case WBXML_OPAQUE:
         {
@@ -614,21 +614,21 @@ Cup * cup = [[Cup alloc] init];
             self.bytes = new byte[length];
 ///////////////////////////////////////////////////////////////////////////////////////
             for (int i = 0; i < length; i++) {
-                self.bytes[i] = (Byte)[self readByte];//TODO: надо ли тут приведение к байту?
+                self.bytes[i] = (Byte)[self readByte];//TODO: do we really need the conversion to BYTE here?
             }
             if (_logging) {
                 self.name = _tagTable[self.startTag - _TAG_BASE];
                 [self log:[NSString stringWithFormat:@"%@: (opaque:%d) ", self.name, length]];
             }
         }
-            break;
+        break;
             
         default:
         {
             self.type = START;
             [self push:id];
         }
-            break;
+        break;
     }
     
     // Return the type of data we're dealing with
